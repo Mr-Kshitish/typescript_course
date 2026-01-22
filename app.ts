@@ -122,4 +122,82 @@
 //     }
 // }
 
-//
+//modifiers
+//readonly,public,private,protected
+// class user{
+//     constructor(public  readonly name:string){}
+//     changeName(){
+//         this.name="noob";
+//     }
+// }
+// let u1=new user("harsh");
+// u1.changeName();
+
+//OPTIONAL CHAINING AND NULLISH COALESCING
+
+//getter and setter
+// class user{
+//     constructor(public _name:string,public _age:number){}
+//     get name(){
+//         return this._name;  
+//     }
+//     get age(){
+//         return this._age;
+//     }
+//     set name(name:string){
+//         this._name=name;
+//     }
+// }
+// let u1=new user("harsh",23);
+
+//static
+
+
+//function
+// function add(a:number,b:number):number{
+//     return a+b;
+// }
+// console.log(add(2,3));
+// function greet(name:string="Guest"):void{
+//     console.log(`Hello,${name}`);
+// }   
+// greet();
+// greet("Harsh");
+
+//optional and default parameters
+// function multiply(a:number,b:number=2):number{
+//     return a*b;
+// }
+// console.log(multiply(5));
+// console.log(multiply(5,3));  
+
+//rest parameters
+// function sum(...arr:number[]){
+//     console.log(arr);
+// }
+// sum(1,2,3,4,5)
+
+//spread operator
+// function add(a:number,b:number,c:number):number{
+//     return a+b+c;
+// }
+// let nums=[1,2,3];
+// console.log(add(...nums));
+
+
+//overloading
+// function add(a:number,b:number):number;
+// function add(a:string,b:string):string;
+// function add(a:any,b:any):any{       
+//     return a+b;
+// }
+// console.log(add(2,3));
+// console.log(add("Hello ","World"));
+// console.log(add(2,"3"));
+
+//generics
+function log<T>(val:T):T{
+    console.log(val);
+    return val;
+}
+log<string>("Hello");
